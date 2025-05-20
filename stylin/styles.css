@@ -19,9 +19,9 @@ h1{
     max-width: 500px;
 }
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 
 #message{
     color: green;

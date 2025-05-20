@@ -15,8 +15,11 @@ startButton.addEventListener("click", () => {
 
     guesses = 0;
     ActiveBoard = true;
+
     winMsg.textContent = "";
     errMsg.textContent = "";
+        winMsg.classList.add("hidden");
+        errMsg.classList.add("hidden")
 
      squares.forEach(square => {
     square.style.backgroundColor = "#e0e0f7";
@@ -28,8 +31,11 @@ resetButton.addEventListener('click', () => {
   shipIndex = null;
   guesses= 0;
   ActiveBoard = false;
+
     winMsg.textContent = "";
     errMsg.textContent = "";
+        winMsg.classList.add("hidden");
+        errMsg.classList.add("hidden")
 
   squares.forEach(square => {
     square.style.backgroundColor = "#888893";
@@ -43,6 +49,7 @@ squares.forEach((square, index) => {
 
         if (!ActiveBoard) {
             errMsg.textContent = "You have to start the game!";
+                errMsg.classList.remove("hidden");
             return;
         }
 
@@ -50,6 +57,7 @@ squares.forEach((square, index) => {
         if (index === shipIndex) {
             square.style.backgroundColor = "green";
             winMsg.textContent = `You won in ${guesses} guesses!`;
+                winMsg.classList.remove("hidden");
             ActiveBoard = false;
         } else {
             square.style.backgroundColor = "red";
@@ -57,8 +65,12 @@ squares.forEach((square, index) => {
 
         if (isClicked === "red" || isClicked === "green") {
             errMsg.textContent = "You already clicked this square!";
+                errMsg.classList.remove("hidden");
         } else {
             errMsg.textContent = "";
+                errMsg.classList.add("hidden");
+
+            
         }
     });
 });
