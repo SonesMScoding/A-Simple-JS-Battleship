@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+     <link rel="stylesheet" href="./stylin/bootstrap.min.css">
+     <link rel="stylesheet" href="./stylin/styles.css">
+
+     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+    <title>Sones Simple Battleship</title>
+</head>
+<body>
+
+    <div class="container mx-auto">
+        <h1 class="text-center align-items-center justify-content-center mt-2">A Simple Battleship Game</h1>
+        <div class="row text-center align-items-center justify-content-center">
+            <div class="col-10">
+                <h2>Welcome to the game!</h2>
+                <p>Click the button below to start playing.</p>
+                <button id="start" class="btn btn-secondary">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+            <div class="board d-flex flex-column align-items-center justify-content-center">
+                
+                   
+                 <p id="message"></p>
+                    <p id="error-message"></p>
+
+                      <!-- <p id="message hidden"></p>
+                     <p id="error-message hidden"></p> -->
+
+                <div class="row w-100">
+                <div class="square col-4   "></div>
+                <div class="square col-4  "></div>
+                <div class="square col-4  "></div>
+                </div>
+
+                <div class="row w-100">
+                <div class="square col-4  "></div>
+                <div class="square col-4  "></div>
+                <div class="square col-4  "></div>
+                </div>
+
+                <div class="row w-100">
+                <div class="square col-4  "></div>
+                <div class="square col-4  "></div>
+                <div class="square col-4  "></div>
+                </div>
+
+            <button id="reset" class="btn btn-secondary">Reset</button>
+
+            </div>
+
+    <!-- Scripts -->
+     <script src="./scriptin/battleship.js"></script>
+</body>
+</html>
